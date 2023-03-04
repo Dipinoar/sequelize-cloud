@@ -28,7 +28,7 @@ module.exports = sql;  */
 
 const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env
 
-const URL = 'postgres://Dipinoar:TswpI3rcYE0G@us-east-2.aws.neon.tech/neondb';
+const URL = 'postgres://Dipinoar:TswpI3rcYE0G@us-east-2.aws.neon.tech/neondb?ssl=true';
  
 const client = new Client(URL)
 
