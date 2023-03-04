@@ -43,7 +43,7 @@ function revisarDisponibilidad(products){
 } 
  
 async function getProducts(){
-  return fetch("http://localhost:3000/api/productos")
+  return fetch("https://sequelize-cloud-example.onrender.com/api/productos")
   .then(response => { return response.json()})
   .then(data => {return products=data});
   } 
