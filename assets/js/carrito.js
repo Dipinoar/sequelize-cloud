@@ -27,6 +27,8 @@ if (request.status === 200) {
 }
 */
 
+console.log(location.hostname)
+
 function revisarDisponibilidad(products){
     productosCarro.forEach((productoStorage) => {
       products.filter((producto) => {
