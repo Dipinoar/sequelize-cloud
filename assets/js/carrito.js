@@ -246,5 +246,5 @@ document.getElementById("boton-pagar").addEventListener("click", function (event
     })
     .then(()=>{
       localStorage.clear()
-      setTimeout(function(){location.href="http://localhost:3000/"} , 4000); })  
+      setTimeout(function(){location.href="https://sequelize-cloud-example.onrender.com/"} , 4000); })  
   }})
