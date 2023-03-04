@@ -33,7 +33,7 @@ const URL = 'postgres://Dipinoar:TswpI3rcYE0G@us-east-2.aws.neon.tech/neondb';
 const client = new Client(URL)
 
 client.connect()
-module.exports=client  */
+module.exports=client  
 
 //ELEPHANT SQL
 
