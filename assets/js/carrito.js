@@ -19,7 +19,7 @@ let cupones = [
 /*
 function getProducts(){
 const request = new XMLHttpRequest();
-request.open('GET', "http://localhost:3000/api/productos", false);
+request.open('GET', "https://sequelize-cloud-example.onrender.com/api/productos", false);
 request.send(null);
 if (request.status === 200) {
   return JSON.parse(request.responseText)
@@ -239,7 +239,7 @@ document.getElementById("boton-pagar").addEventListener("click", function (event
    })
    .then(response => response.json())*/
    if(productosCarro.length>0){
-   return fetch("http://localhost:3000/api/compraEcommerce/compraYDetalle", {
+   return fetch("https://sequelize-cloud-example.onrender.com/api/compraEcommerce/compraYDetalle", {
     method: 'POST', 
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(productosCarro)   
