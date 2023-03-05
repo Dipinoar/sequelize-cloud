@@ -1,13 +1,14 @@
 const { Pool } = require('pg');
 
+const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env
 const pool = new Pool({
-    host: 'ep-red-bird-873849.us-east-2.aws.neon.tech',
-    user: 'Dipinoar',
-    password:'TswpI3rcYE0G',
-    database: 'neondb',
+    host: PGHOST,
+    user: PGUSER,
+    password:PGPASSWORD,
+    database: PGDATABASE,
     port:5432,
-    endpoint:'ep-red-bird-873849',
+    endpoint:ENDPOINT_ID,
     ssl:true,
 });
 
-module.exports = pool; 
+module.exports = pool;  
