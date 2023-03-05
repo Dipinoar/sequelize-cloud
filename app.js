@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var hbs = require('hbs');
-const dotenv = require('dotenv')
+require("dotenv").config({path:"./.env"})
 //importamos Helpers
 var helpers = require('./components/hbsHelpers');
 
