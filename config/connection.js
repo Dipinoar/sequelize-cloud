@@ -9,6 +9,7 @@ const pool = new Pool({
     port:5432,
     endpoint:ENDPOINT_ID,
     ssl:true,
+    pooling:false,
 });
 
 module.exports = pool;  
