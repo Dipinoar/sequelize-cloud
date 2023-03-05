@@ -19,15 +19,13 @@ let cupones = [
 /*
 function getProducts(){
 const request = new XMLHttpRequest();
-request.open('GET', "https://sequelize-cloud-example.onrender.com/api/productos", false);
+request.open('GET', "http://localhost:3000/api/productos", false);
 request.send(null);
 if (request.status === 200) {
   return JSON.parse(request.responseText)
 }
 }
 */
-
-console.log(location.hostname)
 
 function revisarDisponibilidad(products){
     productosCarro.forEach((productoStorage) => {
@@ -44,8 +42,10 @@ function revisarDisponibilidad(products){
     return productosCarro  
 } 
  
+var host = window.location.protocol + "//" + window.location.host;
+
 async function getProducts(){
-  return fetch("https://sequelize-cloud-example.onrender.com/api/productos")
+  return fetch(host+"/api/productos")
   .then(response => { return response.json()})
   .then(data => {return products=data});
   } 
@@ -241,12 +241,12 @@ document.getElementById("boton-pagar").addEventListener("click", function (event
    })
    .then(response => response.json())*/
    if(productosCarro.length>0){
-   return fetch("https://sequelize-cloud-example.onrender.com/api/compraEcommerce/compraYDetalle", {
+   return fetch(host+"/api/compraEcommerce/compraYDetalle", {
     method: 'POST', 
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(productosCarro)   
     })
     .then(()=>{
       localStorage.clear()
-      setTimeout(function(){location.href="https://sequelize-cloud-example.onrender.com/"} , 4000); })  
+      setTimeout(function(){location.href=host} , 4000); })  
   }})
